@@ -5,7 +5,7 @@ import logo from "@/public/jwn-removebg-preview.png";
 const Navbar: React.FC = () => {
   return (
     <nav>
-      <Image src={logo} alt="logo" />
+      <Image src={logo} alt="logo" width={150} />
       <ul>
         <li>
           <Link href="/">Home</Link>
