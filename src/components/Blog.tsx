@@ -11,11 +11,14 @@ const Blog = async ({ blog }: IBlogprops) => {
   return (
     <div className="max-w-sm rounded-md overflow-hidden shadow-lg bg-white">
       <img src={`${process.env.STRAPI_BASE_URL}${thumbnailUrl}`} width={640} />
-      <div className="p-4">
+      <h4 className="text-sm absolute p-1 rounded-md top-[109px] mx-2 text-white font-semibold bg-yellow-600 uppercase">
+        {blog.attributes.promotion}
+      </h4>
+      <div className="p-2">
         <h2 className="text-xl font-bold mb-2 line-clamp-2">
           {blog.attributes.blog}
         </h2>
-        <span className="text-gray-600 text-base line-clamp-3 my-3">
+        <span className="text-gray-600 text-base line-clamp-3 my-2">
           {blog.attributes.description}
         </span>
         <Link
