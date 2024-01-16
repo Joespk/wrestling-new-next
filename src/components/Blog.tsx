@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BlogPostDTO } from "../type/dto";
 import Link from "next/link";
 
@@ -9,9 +8,9 @@ interface IBlogprops {
 const Blog = async ({ blog }: IBlogprops) => {
   const thumbnailUrl = blog.attributes.Thumbnail.data.attributes.url;
   return (
-    <div className="max-w-sm rounded-md overflow-hidden shadow-lg bg-white">
+    <div className="max-w-sm rounded-md overflow-hidden shadow-lg bg-white ">
       <img src={`${process.env.STRAPI_BASE_URL}${thumbnailUrl}`} width={640} />
-      <h4 className="text-sm absolute p-1 rounded-md top-[109px] mx-2 text-white font-semibold bg-yellow-600 uppercase">
+      <h4 className="inline-block text-sm relative p-1 rounded-md top-[-200px] mx-2 text-white font-semibold bg-yellow-600 uppercase ">
         {blog.attributes.promotion}
       </h4>
       <div className="p-2">
