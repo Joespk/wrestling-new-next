@@ -9,10 +9,19 @@ export default async function Home() {
   );
 
   return (
-    <div>
-      hello word
-      {sortedBlogs?.map((blog: BlogPostDTO) => (
-        <Blog key={blog.id} blog={blog} />
+    <div className="container mx-auto flex">
+      <h1>My Blog</h1>
+      {sortedBlogs.slice(0, 3).map((item: BlogPostDTO) => (
+        <div key={item.id}>
+          {/* แสดงข้อมูลตามที่คุณต้องการ */}
+          <h2>{item.attributes.blog}</h2>
+        </div>
+      ))}
+
+      {sortedBlogs?.slice(3).map((blog: BlogPostDTO) => (
+        <div className="flex-col mx-4 justify-around my-5">
+          <Blog key={blog.id} blog={blog} />
+        </div>
       ))}
     </div>
   );
