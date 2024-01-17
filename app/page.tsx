@@ -16,7 +16,7 @@ export default async function Home() {
         {sortedBlogs.slice(0, 1).map((blog: BlogPostDTO) => (
           <Newblog key={blog.id} blog={blog} />
         ))}
-        <div>
+        <div className="flex flex-col ">
           {sortedBlogs.slice(1, 2).map((blog: BlogPostDTO) => (
             <Newblogtopright key={blog.id} blog={blog} />
           ))}
@@ -25,7 +25,7 @@ export default async function Home() {
           ))}
         </div>
       </div>
-      <div className="flex item-center ">
+      <div className="flex item-center flex-wrap justify-center ">
         {sortedBlogs?.slice(3).map((blog: BlogPostDTO) => (
           <div className="flex-row mx-4 justify-around my-5">
             <Blog key={blog.id} blog={blog} />
