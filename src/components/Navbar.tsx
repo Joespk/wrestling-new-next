@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto">
         <div className="flex flex-row items-center justify-between ">
           <Image src={logo} alt="logo" width={150} />
-          <ul className="flex flex-row gap-5 items-center px-5">
+          <ul className="flex flex-row gap-5 items-center px-5 uppercase">
             <li>
               <Link href="/" className="text-white">
                 Home

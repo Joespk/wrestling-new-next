@@ -1,15 +1,10 @@
 import { BlogPostDTO, IAllowPromotion } from "@/src/type/dto";
 import { fetchBlogs } from "../actions/fetchblog";
 import Blog from "@/src/components/Blog";
+import filterByPromotion from "@/src/utlis/filterByPromotion";
 
 export default async function wwe() {
   const blogs = await fetchBlogs();
-  const filterByPromotion = (
-    posts: BlogPostDTO[],
-    promotion: IAllowPromotion
-  ): BlogPostDTO[] => {
-    return posts.filter((post) => post.attributes.promotion === promotion);
-  };
   const wwePosts: BlogPostDTO[] = filterByPromotion(blogs, "wwe");
   const sortedBlogs = wwePosts.sort(
     (a: BlogPostDTO, b: BlogPostDTO) => b.id - a.id
