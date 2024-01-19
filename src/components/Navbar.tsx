@@ -30,12 +30,12 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link href="/aew" className="text-white">
+              <Link href="/njpw" className="text-white">
                 njpw
               </Link>
             </li>
             <li>
-              <Link href="/aew" className="text-white">
+              <Link href="/indy" className="text-white">
                 indy
               </Link>
             </li>
