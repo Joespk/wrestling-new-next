@@ -8,8 +8,8 @@ interface IBlogprops {
 const Blog = async ({ blog }: IBlogprops) => {
   const thumbnailUrl = blog.attributes.Thumbnail.data.attributes.url;
   return (
-    <Link href={`blog/${blog.id}`}>
-      <div className="max-w-sm rounded-md overflow-hidden shadow-lg bg-white pb-3 relative">
+    <div className="max-w-sm rounded-md overflow-hidden shadow-lg bg-white pb-3 relative hover:translate-y-[-5px] transition-transform duration-300">
+      <Link href={`blog/${blog.id}`}>
         <img
           src={`${process.env.STRAPI_BASE_URL}${thumbnailUrl}`}
           width={640}
@@ -34,8 +34,8 @@ const Blog = async ({ blog }: IBlogprops) => {
             Read More
           </Link>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 
