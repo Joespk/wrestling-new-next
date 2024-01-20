@@ -29,7 +29,7 @@ export default async function Home() {
         <div className="inline-flex items-center justify-center w-full ">
           <hr className="max-w-96 w-96 h-px my-8 bg-gray-500 border-2 dark:bg-gray-700" />
           <h1 className="flex justify-self-center uppercase font-bold  text-4xl text-white  dark:text-white dark:bg-gray-900 ">
-            new
+            news
           </h1>
           <hr className="max-w-96 w-96 h-px my-8 bg-gray-500 border-2 dark:bg-gray-700" />
         </div>

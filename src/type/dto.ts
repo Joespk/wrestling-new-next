@@ -57,7 +57,7 @@ export interface BlogPostDTO {
   id: number;
   attributes: {
     blog: string;
-    detail: string;
+    Detail: string;
     description: string;
     date: string;
     createdAt: string;

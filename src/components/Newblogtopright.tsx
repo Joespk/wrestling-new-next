@@ -9,7 +9,7 @@ const Newblogtopright = ({ blog }: IBlogprops) => {
   const thumbnailUrl = blog.attributes.Thumbnail.data.attributes.url;
   return (
     <Link href={`blog/${blog.id}`}>
-      <div className="flex flex-col mx-0 my-0 relative ">
+      <div className="flex flex-col mx-0 my-0 relative hover:brightness-75 ">
         <img
           src={`${process.env.STRAPI_BASE_URL}${thumbnailUrl}`}
           alt="Right Image 1"
