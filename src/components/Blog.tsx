@@ -13,6 +13,7 @@ const Blog = async ({ blog }: IBlogprops) => {
         <img
           src={`${process.env.STRAPI_BASE_URL}${thumbnailUrl}`}
           width={640}
+          className="max-h-[215px]"
         />
         <div className="absolute inset-0 flex items-start justify-start mx-5 my-3 ">
           <h4 className="bg-yellow-600 hover:bg-yellow-800 text-white font-bold py-1 px-3 rounded uppercase">

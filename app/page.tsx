@@ -26,6 +26,13 @@ export default async function Home() {
         </div>
       </div>
       <div className="flex item-center flex-wrap justify-center ">
+        <div className="inline-flex items-center justify-center w-full ">
+          <hr className="max-w-96 w-96 h-px my-8 bg-gray-500 border-2 dark:bg-gray-700" />
+          <h1 className="flex justify-self-center uppercase font-bold  text-4xl text-white  dark:text-white dark:bg-gray-900 ">
+            new
+          </h1>
+          <hr className="max-w-96 w-96 h-px my-8 bg-gray-500 border-2 dark:bg-gray-700" />
+        </div>
         {sortedBlogs?.slice(3).map((blog: BlogPostDTO) => (
           <div className="flex-row mx-4 justify-around my-5">
             <Blog key={blog.id} blog={blog} />
