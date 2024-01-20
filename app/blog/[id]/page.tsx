@@ -39,7 +39,7 @@ const Page = async ({ params }: { params: { id: number } }) => {
       </div>
 
       <div
-        className="flex items-center flex-col w-[60%] font-normal text-start"
+        className="flex items-center flex-col w-[60%]  text-start"
         dangerouslySetInnerHTML={{ __html: contentHtml }}
       />
     </div>
